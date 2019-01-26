@@ -6,18 +6,84 @@
     <meta name="author" content="Rafał Pijet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>api-basics</title>
+    <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <main>
-        <h1>Country search engine</h1>
-        <button id="search">Search a country</button>
+        <h1 class="text-upper">Country search engine</h1>
         <input type="text" id="country-name">
-        <h2>List of countries</h2>
+        <button id="search">Search a country</button>
+        <h2>List of countries:</h2>
         <ul id="countries">
             <li>No data</li>
         </ul>
     </main>
-<script src="js/script.js"></script>
+    <script id="country-box" type="x-tmpl-mustache">
+        <div class="box row flex-start">
+            <div class="first-line row flex-between flex-center-align col-12">
+                <div class="picture">
+                    <img src={{flag}} alt="sorry, but the picture is lost">
+                </div>
+                <h1 class="text-upper text-left col-9" >{{name}}</h1>
+            </div>
+            <div class="dark-line">
+                <p>Background Information:</p>
+            </div>
+            <div class="second-line row col-12">
+                <div class="title col-3">
+                    <p>Capital</p>
+                </div>
+                <div class="content col-9">
+                    <p> : {{capital}}</p>
+                </div>
+                <div class="title col-3">
+                    <p>Land area</p>
+                </div>
+                <div class="content col-9">
+                    <p> : {{area}} sq.km</p>
+                </div>
+                <div class="title col-3">
+                    <p>Population</p>
+                </div>
+                <div class="content col-9">
+                    <p> : {{population}} milion</p>
+                </div>
+                <div class="title col-3">
+                    <p>Region</p>
+                </div>
+                <div class="content col-9">
+                    <p> : {{region}}</p>
+                </div>
+                <div class="title col-3">
+                    <p>Subregion</p>
+                </div>
+                <div class="content col-9">
+                    <p> : {{subregion}}</p>
+                </div>
+                <div class="title col-3">
+                    <p>Languages</p>
+                </div>
+                <div class="content col-9">
+                    <p> : {{languages}}</p>
+                </div>
+                <div class="title col-3">
+                    <p>Currency</p>
+                </div>
+                <div class="content col-9">
+                    <p> : {{currencies}}</p>
+                </div>
+                <div class="title col-3">
+                    <p>Borders</p>
+                </div>
+                <div class="content col-9">
+                    <p> : {{borders}}</p>
+                </div>
+            </div>
+            <div class="dark-line"></div>
+        </div>
+    </script>
+    <script src="vendor/mustache.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

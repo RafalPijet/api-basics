@@ -3,6 +3,165 @@
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: $violet;
+  color: $white;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@include grid("col");
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-center-align {
+  align-items: center;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.progress-cursor {
+  cursor: progress;
+}
+
+main {
+  font-family: $font-roboto-bold;
+
+  h1, h2, li {
+    text-align: center;
+  }
+
+  h2 {
+    margin: 50px 0 20px;
+    font-weight: lighter;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    background-color: $white;
+    cursor: default;
+
+    li {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  button, input {
+    display: block;
+    margin: 0 auto;
+    background-color: inherit;
+    border: 1px solid $white;
+    color: $white;
+    outline: none;
+  }
+
+  button {
+    width: 250px;
+    height: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  input {
+    background-color: $violet-light;
+    cursor: text;
+  }
+}
+
+.box {
+  width: 450px;
+  background-color: $white;
+  margin: 20px 0;
+
+  .first-line {
+    height: auto;
+    width: inherit;
+    padding-bottom: 5px;
+
+    h1 {
+      color: $blue;
+      background-color: $white;
+      margin: 0;
+    }
+
+    .picture {
+      width: 80px;
+      height: 50px;
+      margin-left: 15px;
+      box-shadow: 3px 3px 12px $black;
+
+
+      img {
+        max-width: 80px;
+        max-height: 50px;
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+  }
+
+  .dark-line {
+    height: 25px;
+    width: inherit;
+    background-color: $blue-dark;
+    font-weight: lighter;
+    text-align: left;
+
+    p {
+      margin: 0;
+      padding: 5px 0 0 5px;
+    }
+  }
+
+  .second-line {
+    color: $blue-dark;
+    font-size: $font-size-14;
+    font-weight: bolder;
+
+    .title {
+      background-color: $yellow;
+      height: 20px;
+      text-align: left;
+      border-bottom: 1px solid $yellow-light;
+
+      p {
+        margin: 0;
+        padding: 2px;
+      }
+    }
+
+    .content {
+      background-color: $yellow-light;
+      height: 20px;
+      text-align: left;
+      border-bottom: 1px solid $white;
+      overflow: scroll;
+
+      p {
+        margin: 0;
+        padding: 1px 0 0 4px;
+      }
+    }
+  }
 }

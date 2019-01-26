@@ -1,0 +1,28 @@
+/* Colors */
+$white: #fff;
+$black: #000;
+$violet: #82589F;
+$violet-light: #D6A2E8;
+$yellow-light: #F8EFBA;
+$yellow: #EAB543;
+$blue: #1B9CFC;
+$blue-dark: #3B3B98;
+
+/* Font sizes */
+$font-size-13: 13px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-26: 26px;
+
+/* Fonts */
+@import "../fonts/roboto-bold.ttf";
+@import "../fonts/roboto-light.ttf";
+@import "../fonts/roboto-medium.ttf";
+@import "../fonts/roboto-regular.ttf";
+
+$font-roboto-light: "Roboto Light", arial;
+$font-roboto-medium: "Roboto Medium", arial;
+$font-roboto-bold: "Roboto Bold", arial;
+$font-roboto-regular: "Roboto Regular", arial;
